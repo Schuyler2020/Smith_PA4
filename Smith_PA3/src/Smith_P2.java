@@ -32,12 +32,18 @@ public class Smith_P2 {
 
     public static class Application {
         public static void main(String[] args) {
-            SavingsAccount saver1 = new SavingsAccount(2000.0); // initializing first instance
-            SavingsAccount saver2 = new SavingsAccount(3000.0); // initializing second instance
-            SavingsAccount.modifyInterestRate(4.0); // setting interest rate to 4.0%
-            System.out.println("Month \t\t Saver1 \t Saver2");
+            //sets data for saver1
+            SavingsAccount saver1 = new SavingsAccount(2000.0);
 
-// Displaying data of two instances for 12 months
+            //sets data for saver2
+            SavingsAccount saver2 = new SavingsAccount(3000.0);
+
+            //sets interest rate to 4%
+            SavingsAccount.modifyInterestRate(4.0);
+
+            System.out.println("Month \t\t Client1 \t Client2");
+
+            //for loop to calculate and show balances and interest rate over a 12 month period
             for (int i = 1; i <= 12; ++i) {
 
                 saver1.calculateMonthlyInterest();
@@ -66,9 +72,11 @@ public class Smith_P2 {
             //Here is where I print out the final month with the interest rate
             System.out.print("With 5%: \t");
 
+            //print out balance for saver 1
             saver1.print_Balance();
             System.out.print("\t");
 
+            //print out balance for saver 2
             saver2.print_Balance();
             System.out.println();
         }
