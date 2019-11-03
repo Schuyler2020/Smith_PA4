@@ -1,0 +1,10 @@
+car
+plane
+train
+car
+train
+yellow
+house
+plane
+red
+triangle
